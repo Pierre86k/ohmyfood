@@ -1,14 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Shrikhand:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
-:root {
-
-    /* Font Color */
-    --primaire:#9356DC;
-    --secondaire:#FF79DA;
-    --tertiaire: #99E2D0;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -79,6 +71,7 @@
     flex-direction: column;
     margin-left: 45px;
     margin-right: 45px;
+    align-items: center;
 }
 
 .sub--header--title--h2{
@@ -103,7 +96,7 @@
 #sub--header--wrapper--button{
     margin-top: 40px;
     height: 50px;
-    width: 100%;
+    width: 218px;
     border-radius: 25px;
     border: 0 none;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -117,6 +110,7 @@
     font-size: 16px;
     line-height: 19px;
     color: white;
+    text-decoration: none;
 }
 
 .filter--wrapper{
@@ -303,6 +297,10 @@
     gap: 20px;
 }
 
+.restaurants--cards>a{
+    text-decoration: none;
+}
+
 .restaurants--card--image{
     position: relative;
 }
@@ -366,23 +364,28 @@
 }
 
 .restaurants--block--heart{
-    width: 22px;
-    height: 21px;
-    border: 1px #101010;
+    background-image: url(../images/Logo/Vector-heart1.png);
+    object-fit: cover;
+    overflow: hidden;
+    text-indent: 0px;
+    height: 25px;
+    margin: 5px 20px 10px 15px;
+    width: 25px;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.restaurants--block--heart:hover{
+    background-image: url(../images/Logo/Vector-heart.png);
+    transition: 0.3s;
+}
+
+.footer{   
     background-color:#353535;
-}
-
-.footer--block{
-    width: 100%;
-    margin-top: 22px;
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
 .footer--title{
@@ -416,4 +419,12 @@
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
+}
+
+.footer--block--list>a{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
 }
