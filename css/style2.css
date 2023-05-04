@@ -1,6 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Shrikhand:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+.animation--1{
+    -webkit-animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
+	        animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
+}
+
+
+.animation--2{
+    -webkit-animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 1.5s both;
+	        animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 1.5s both;
+}
+
+.animation--3{
+    -webkit-animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 2.5s both;
+	        animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 2.5s both;
+}
+
+.animation--4{
+    -webkit-animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 3.5s both;
+	        animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 3.5s both;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,7 +73,6 @@
 
 .header--wrapper--title--2{
     display: flex;
-    gap: 65px;
     width: 100%;
     margin-top: 15px;
     padding-bottom: 5px;
@@ -33,6 +85,7 @@
     font-weight: 400;
     font-size: 30px;
     color: black;
+    margin: auto;
 }
 
 .header--wrapper--logo--2{
@@ -108,6 +161,10 @@
     color: #000000;
 }
 
+.restaurant--wrapper--card--2--entries--list{
+    position: relative;
+}
+
 .restaurant--wrapper--card--2--entries--list--block2{
     width: 100%;
     height: 69px;
@@ -116,10 +173,43 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
 
+.restaurant--wrapper--card--2--entries--list--block2--2{
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: inherit;
+    height: inherit;
+    border-radius: 15.0431px;
+}
+
+.restaurant--wrapper--card--2--entries--list--block2--2:hover{
+    width: 85%;
+    transition: 1s;
+}
+
+.restaurant--wrapper--card--2--entries--list--block--2--img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background-color: #99E2D0;
+    z-index: 0;
+    border-radius: 0px 15.0431px 15.0431px 0px;
+}
+
+.restaurant--wrapper--card--2--entries--list--block--2--img>img{
+    width: 20px;
+    height: 20px;
+}
+
 .restaurant--wrapper--card--2--entries--list--block--name{
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 15px;
     padding-top: 12px;
     
@@ -137,7 +227,7 @@
 .restaurant--wrapper--card--2--entries--list--block--2>h3{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 15.04px;
+    font-size: 13.50px;
     color:black;
 }
 
@@ -154,6 +244,10 @@
     padding-bottom: 12px;
 }
 
+.restaurant--wrapper--card--2--dishes--list{
+    position: relative;
+}
+
 .restaurant--wrapper--card--2--dishes--list--block2{
     width: 100%;
     height: 69px;
@@ -162,10 +256,44 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
 
+.restaurant--wrapper--card--2--dishes--list--block2--2{
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: inherit;
+    height: inherit;
+    border-radius: 15.0431px;
+}
+
+.restaurant--wrapper--card--2--dishes--list--block2--2:hover{
+    width: 85%;
+    transition: 1s;
+}
+
+.restaurant--wrapper--card--2--dishes--list--block--2--img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background-color: #99E2D0;
+    z-index: 0;
+    border-radius: 0px 15.0431px 15.0431px 0px;
+}
+
+.restaurant--wrapper--card--2--dishes--list--block--2--img>img{
+    width: 20px;
+    height: 20px;
+}
+
+
 .restaurant--wrapper--card--2--dishes--list--block--name{
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 15px;
     padding-top: 12px;
     
@@ -183,7 +311,7 @@
 .restaurant--wrapper--card--2--dishes--list--block--2>h3{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 15.04px;
+    font-size: 13.50px;
     color:black;
 }
 
@@ -200,6 +328,10 @@
     padding-bottom: 12px;
 }
 
+.restaurant--wrapper--card--2--desserts--list{
+    position: relative;
+}
+
 .restaurant--wrapper--card--2--desserts--list--block2{
     width: 100%;
     height: 69px;
@@ -208,10 +340,43 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
 
+.restaurant--wrapper--card--2--desserts--list--block2--2{
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: inherit;
+    height: inherit;
+    border-radius: 15.0431px;
+}
+
+.restaurant--wrapper--card--2--desserts--list--block2--2:hover{
+    width: 85%;
+    transition: 1s;
+}
+
+.restaurant--wrapper--card--2--desserts--list--block--2--img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background-color: #99E2D0;
+    z-index: 0;
+    border-radius: 0px 15.0431px 15.0431px 0px;
+}
+
+.restaurant--wrapper--card--2--desserts--list--block--2--img>img{
+    width: 20px;
+    height: 20px;
+}
+
 .restaurant--wrapper--card--2--desserts--list--block--name{
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 15px;
     padding-top: 12px;
     
@@ -229,7 +394,7 @@
 .restaurant--wrapper--card--2--desserts--list--block--2>h3{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 15.04px;
+    font-size: 13.50px;
     color:black;
 }
 
