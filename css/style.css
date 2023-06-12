@@ -1,6 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Shrikhand:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
+:root{
+    /* Media Queries */
+    --desktop: 1400px;
+    --tablet: 992px;
+    --mobil: 768px;
+}
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,7 +17,7 @@
 
 body{
     max-width: 768px;
-    
+    /* overflow-y: var(--overflow11); */
 }
 
 .is__container__img {
@@ -23,13 +31,66 @@ body{
     padding: 0;
 }
 
+.loader{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    /* background: white; */
+    z-index: 20;
+    animation: loader11 2s;
+}
+@keyframes loader11 {
+    0%{
+        visibility: visible;
+        z-index: 0;
+    }
+    100%{
+        visibility: hidden;
+        z-index: -10;
+    }
+}
+
+
+
+.spinner-3 {
+    width: 65px;
+    height: 65px;
+    padding: 8px;
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #9356DC;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: s3 1s linear infinite;
+  }
+  @keyframes s3 {
+    0%{
+        transform: rotate(1turn);
+        
+    }
+    100%{
+        visibility: hidden;
+        z-index: -11;
+    }
+
+}
+  
+
 .header--wrapper--title{
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 15px;
     padding-bottom: 5px;
-
 }
 
 .header--wrapper-title--h3{
@@ -389,6 +450,7 @@ body{
 .footer{   
     background-color:#353535;
     padding-left: 25px;
+    padding-right: 25px;
     padding-top: 22px;
     padding-bottom: 22px;
 }
@@ -434,4 +496,122 @@ body{
     text-decoration: none;
 }
 
+
+
+
+@media (min-width: 992px) {
+    body {
+       min-width: var(--tablet);
+    }
+
+    .filter--wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
     
+    }
+
+    .filter-wrapper--title{
+        width: 100%;
+        grid-column: 1/4;
+    }
+   
+
+    .restaurants--cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .footer{
+        padding-top: 65px;
+    }
+
+    .footer--block{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 80px;
+    }
+
+    .footer--title{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 0;
+    
+    }
+
+    .footer--block--lists{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+    }
+     
+    .footer--block--list:nth-of-type(3){
+        margin-left: 40px;
+   }
+}
+
+
+
+@media (min-width: 1400px) {
+    body {
+       min-width: var(--desktop);
+    }
+
+    .filter--wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    .filter-wrapper--title{
+        width: 100%;
+        grid-column: 1/4;
+    }
+   
+    .restaurants--title{
+        padding-left: 150px;
+    }
+
+    .restaurants--cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding-left: 150px;
+        padding-right: 150px;
+        gap: 50px;
+    }
+
+    .footer{
+        padding-top: 65px;
+    }
+
+    .footer--block{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 80px;
+    }
+
+    .footer--title{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 0;
+    
+    }
+
+    .footer--block--lists{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+    }
+     
+    .footer--block--list:nth-of-type(3){
+        margin-left: 40px;
+   }
+}

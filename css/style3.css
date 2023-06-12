@@ -55,6 +55,12 @@
 	        animation: roll-in-blurred-left 2.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 3.5s both;
 }
 
+:root{
+    /* Media Queries */
+    --desktop: 1400px;
+    --tablet: 992px;
+    --mobil: 768px;
+}
 
 * {
     box-sizing: border-box;
@@ -131,6 +137,11 @@
     margin-left: 13px;
     margin-right: 13px;
     padding-top: 42px;
+}
+
+.restaurant--wrapper--card--3:nth-of-type(5){
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .restaurants--card--heart--3{
@@ -434,6 +445,7 @@
 .footer{   
     background-color:#353535;
     padding-left: 25px;
+    padding-right: 25px;
     padding-top: 22px;
     padding-bottom: 22px;
 }
@@ -477,4 +489,124 @@
     font-weight: 400;
     font-size: 16px;
     text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    body {
+       min-width: var(--tablet);
+    }
+
+    .sub--header--3--photo>img{
+        object-fit: cover;
+    }
+
+    .restaurant--card--3{
+        margin-left: 100px;
+        width: 80%;
+        margin-top: -40px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+     
+    .restaurant--wrapper--card--3{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .restaurant--wrapper--card--3:nth-of-type(5){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .restaurant--card--block--3{
+        justify-content: center;
+    }
+
+    .footer{
+        padding-top: 65px;
+    }
+
+    .footer--block{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 80px;
+    }
+
+    .footer--title{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 0;
+    
+    }
+
+    .footer--block--lists{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+    }
+     
+    .footer--block--list:nth-of-type(3){
+        margin-left: 40px;
+   }
+}
+
+@media (min-width: 1400px) {
+    body {
+       min-width: var(--desktop);
+    }
+
+    .sub--header--3--photo>img{
+        object-fit: cover;
+    }
+
+    .restaurant--card--3{
+        margin-left: 130px;
+        width: 80%;
+        margin-top: -40px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    
+
+    .restaurant--wrapper--card--3{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .restaurant--card--block--3{
+        justify-content: center;
+    }
+
+    .footer{
+        padding-top: 65px;
+    }
+
+    .footer--block{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 80px;
+    }
+
+    .footer--title{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 0;
+    
+    }
+
+    .footer--block--lists{
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    
+    }
+     
+    .footer--block--list:nth-of-type(3){
+        margin-left: 40px;
+   }
 }
