@@ -505,11 +505,9 @@
     }
 
     .restaurant--card--1{
-        margin-left: 100px;
         width: 80%;
+        margin: 0 auto;
         margin-top: -40px;
-        padding-left: 75px;
-        padding-right: 75px;
     }
     
     .restaurant--wrapper--card--1{
@@ -569,11 +567,9 @@
     }
 
     .restaurant--card--1{
-        margin-left: 130px;
         width: 80%;
+        margin: 0 auto;
         margin-top: -40px;
-        padding-left: 75px;
-        padding-right: 75px;
     }
     
 
