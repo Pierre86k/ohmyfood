@@ -351,7 +351,7 @@ body {
     padding-left: 20px;
     font-family: 'Roboto';
     font-weight: 700;
-    resize: 24px;
+    font-size: 24px;
     color: black;
     margin-top: 54px;
     margin-bottom: 25px;
@@ -389,7 +389,7 @@ body {
 .restaurants--card--new>p {
     font-family: 'Roboto';
     font-weight: 500;
-    resize: 14px;
+    font-size: 14px;
     color: #008766;
 }
 
