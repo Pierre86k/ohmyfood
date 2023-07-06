@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Shrikhand:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
-:root{
+:root {
     /* Media Queries */
     --desktop: 1400px;
     --tablet: 992px;
@@ -15,7 +15,7 @@
     margin: 0;
 }
 
-body{
+body {
     max-width: 768px;
 }
 
@@ -23,14 +23,14 @@ body{
     height: auto;
     width: auto;
     object-fit: contain;
- }
- 
-.header{
+}
+
+.header {
     height: 6rem;
     padding: 0;
 }
 
-.loader{
+.loader {
     display: none;
     justify-content: center;
     position: absolute;
@@ -41,12 +41,14 @@ body{
     z-index: 20;
     animation: loader11 3s;
 }
+
 @keyframes loader11 {
-    0%{
+    0% {
         opacity: 1;
-       
+
     }
-    100%{
+
+    100% {
         opacity: 0;
 
     }
@@ -62,29 +64,31 @@ body{
     aspect-ratio: 1;
     border-radius: 50%;
     background: #9356DC;
-    --_m: 
-      conic-gradient(#0000 10%,#000),
-      linear-gradient(#000 0 0) content-box;
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
     -webkit-mask: var(--_m);
-            mask: var(--_m);
+    mask: var(--_m);
     -webkit-mask-composite: source-out;
-            mask-composite: subtract;
+    mask-composite: subtract;
     animation: s3 1s linear infinite;
-  }
-  @keyframes s3 {
-    0%{
+}
+
+@keyframes s3 {
+    0% {
         transform: rotate(1turn);
-        
+
     }
-    100%{
+
+    100% {
         visibility: hidden;
         z-index: -11;
     }
 
 }
-  
 
-.header--wrapper--title{
+
+.header--wrapper--title {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -92,14 +96,14 @@ body{
     padding-bottom: 5px;
 }
 
-.header--wrapper-title--h3{
-    font-family:'Shrikhand';
+.header--wrapper-title--h3 {
+    font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 30px;
     color: black;
 }
 
-.header--search--wrapper{
+.header--search--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,27 +115,27 @@ body{
 
 }
 
-.fa-location-dot{
+.fa-location-dot {
     color: #353535;
 }
 
-.sub--header{
+.sub--header {
     padding-top: 39.5px;
     padding-bottom: 57px;
     background-color: #F6F6F6;
 }
 
-#search-bar{
+#search-bar {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
-    color:#353535;
+    color: #353535;
     border: 0px #EAEAEA;
-    background-color:#EAEAEA;
+    background-color: #EAEAEA;
     width: 109px;
 }
 
-.sub--header--title{
+.sub--header--title {
     display: flex;
     flex-direction: column;
     margin-left: 45px;
@@ -139,17 +143,17 @@ body{
     align-items: center;
 }
 
-.sub--header--title--h2{
+.sub--header--title--h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
-.sub--header--title--p{
+.sub--header--title--p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -158,7 +162,15 @@ body{
     text-align: center;
 }
 
-#sub--header--wrapper--button{
+.sub--header--wrapper--title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 20px;
+    padding-top: 14.5px;
+    color: white;
+    text-decoration: none;
     margin-top: 40px;
     height: 50px;
     width: 218px;
@@ -166,19 +178,9 @@ body{
     border: 0 none;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    
 }
 
-.sub--header--wrapper--title{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: white;
-    text-decoration: none;
-}
-
-.filter--wrapper{
+.filter--wrapper {
     display: grid;
     gap: 24.92px;
     padding-left: 20px;
@@ -186,11 +188,11 @@ body{
     padding-top: 48px;
 }
 
-.filter-wrapper--title{
+.filter-wrapper--title {
     padding-bottom: 26px;
 }
 
-.filter-wrapper--title--h2{
+.filter-wrapper--title--h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -198,7 +200,7 @@ body{
     line-height: 28px;
 }
 
-.filter--wrapper--search--1{
+.filter--wrapper--search--1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -210,7 +212,7 @@ body{
 
 }
 
-.filter--wrapper--search--1--number{
+.filter--wrapper--search--1--number {
     border: 1px;
     border-radius: 50%;
     height: 24px;
@@ -222,42 +224,7 @@ body{
     transform: translateX(-50%);
 }
 
-.filter--wrapper--search--1--number--1{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14.1818px;
-    line-height: 17px;
-    color: white;  
-}
-
-.filter--wrapper--search--1--title{
-    color: black;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-}
-
-.fa-mobile-screen-button{
-    color: #7E7E7E;
-    margin: 0 20px;
-}
-
-.filter--wrapper--search--2--number{
-    border: 1px;
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #9356DC;
-    transform: translateX(-50%);
-}
-
-.filter--wrapper--search--2--number--2{
+.filter--wrapper--search--1--number--1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -266,18 +233,7 @@ body{
     color: white;
 }
 
-.filter--wrapper--search--2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: #F7F7F7;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    width: 100%;
-    height: 72.38px;
-}
-
-.filter--wrapper--search--2--title{
+.filter--wrapper--search--1--title {
     color: black;
     font-family: 'Roboto';
     font-style: normal;
@@ -286,12 +242,12 @@ body{
     line-height: 19px;
 }
 
-.fa-list-ul{
+.fa-mobile-screen-button {
     color: #7E7E7E;
     margin: 0 20px;
 }
 
-.filter--wrapper--search--3--number{
+.filter--wrapper--search--2--number {
     border: 1px;
     border-radius: 50%;
     height: 24px;
@@ -303,7 +259,7 @@ body{
     transform: translateX(-50%);
 }
 
-.filter--wrapper--search--3--number--3{
+.filter--wrapper--search--2--number--2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -312,7 +268,7 @@ body{
     color: white;
 }
 
-.filter--wrapper--search--3{
+.filter--wrapper--search--2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -323,7 +279,7 @@ body{
     height: 72.38px;
 }
 
-.filter--wrapper--search--3--title{
+.filter--wrapper--search--2--title {
     color: black;
     font-family: 'Roboto';
     font-style: normal;
@@ -332,45 +288,91 @@ body{
     line-height: 19px;
 }
 
-.fa-store{
+.fa-list-ul {
+    color: #7E7E7E;
+    margin: 0 20px;
+}
+
+.filter--wrapper--search--3--number {
+    border: 1px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9356DC;
+    transform: translateX(-50%);
+}
+
+.filter--wrapper--search--3--number--3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.1818px;
+    line-height: 17px;
+    color: white;
+}
+
+.filter--wrapper--search--3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 100%;
+    height: 72.38px;
+}
+
+.filter--wrapper--search--3--title {
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.fa-store {
     color: #9356DC;
     margin: 0 20px;
 }
 
 
-.restaurants{
-    background-color:#F7F7F7;
+.restaurants {
+    background-color: #F7F7F7;
     padding-bottom: 65px;
 }
 
-.restaurants--title{
+.restaurants--title {
     display: flex;
     padding-top: 54px;
     padding-left: 20px;
     font-family: 'Roboto';
     font-weight: 700;
-    size: 24px;
+    resize: 24px;
     color: black;
     margin-top: 54px;
     margin-bottom: 25px;
 }
 
-.restaurants--cards{
+.restaurants--cards {
     display: grid;
     padding-left: 15px;
     padding-right: 15px;
     gap: 20px;
 }
 
-.restaurants--cards>a{
+.restaurants--cards>a {
     text-decoration: none;
 }
 
-.restaurants--card--image{
+.restaurants--card--image {
     position: relative;
 }
 
-.restaurants--card--new{
+.restaurants--card--new {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -384,23 +386,23 @@ body{
 
 }
 
-.restaurants--card--new>p{
+.restaurants--card--new>p {
     font-family: 'Roboto';
     font-weight: 500;
-    size: 14px;
-    color:#008766;
+    resize: 14px;
+    color: #008766;
 }
 
-.restaurants--card--image>img{
+.restaurants--card--image>img {
     width: 100%;
     height: 190px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
 
-.restaurants--block{
+.restaurants--block {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 90px;
@@ -409,26 +411,26 @@ body{
     margin-top: -3px;
 }
 
-.restaurants--block--info{
+.restaurants--block--info {
     margin-left: 13px;
     color: black;
-    
+
 }
 
-.restaurants--block--name{
+.restaurants--block--name {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 18px;
 }
 
-.restaurants--block--city{
+.restaurants--block--city {
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 17px;
-    
+
 }
 
-.restaurants--block--heart{
+.restaurants--block--heart {
     background-image: url(../images/Logo/Vector-heart1.png);
     object-fit: cover;
     overflow: hidden;
@@ -441,20 +443,20 @@ body{
     background-repeat: no-repeat;
 }
 
-.restaurants--block--heart:hover{
+.restaurants--block--heart:hover {
     background-image: url(../images/Logo/Vector-heart.png);
     transition: 0.3s;
 }
 
-.footer{   
-    background-color:#353535;
+.footer {
+    background-color: #353535;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 22px;
     padding-bottom: 22px;
 }
 
-.footer--title{
+.footer--title {
     font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 18px;
@@ -463,31 +465,31 @@ body{
     margin-bottom: 15px;
 }
 
-.footer--block--lists{
+.footer--block--lists {
     display: flex;
     flex-direction: column;
     gap: 7px;
 }
 
-.footer--block--list{
+.footer--block--list {
     display: flex;
     gap: 10px;
     color: white;
 }
 
-.footer--block--list--title:nth-child(2){
-    font-family:'Roboto';
+.footer--block--list--title:nth-child(2) {
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
 }
 
-.footer--block--list--title:nth-child(1){
+.footer--block--list--title:nth-child(1) {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
 }
 
-.footer--block--list>a{
+.footer--block--list>a {
     color: white;
     font-family: 'Roboto';
     font-weight: 400;
@@ -500,120 +502,121 @@ body{
 
 @media (min-width: 992px) {
     body {
-       min-width: var(--tablet);
-       margin: 0 auto;
+        min-width: var(--tablet);
+        margin: 0 auto;
     }
 
-    .filter--wrapper{
+    .filter--wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-    
+
     }
 
-    .filter-wrapper--title{
+    .filter-wrapper--title {
         width: 100%;
         grid-column: 1/4;
     }
-   
 
-    .restaurants--cards{
+
+    .restaurants--cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
 
-    .footer{
+    .footer {
         padding-top: 65px;
     }
 
-    .footer--block{
+    .footer--block {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         gap: 80px;
     }
 
-    .footer--title{
+    .footer--title {
         display: flex;
         justify-content: end;
         align-items: flex-end;
         margin: 0;
-    
+
     }
 
-    .footer--block--lists{
+    .footer--block--lists {
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
-    
+
     }
-     
-    .footer--block--list:nth-of-type(3){
+
+    .footer--block--list:nth-of-type(3) {
         margin-left: 40px;
-   }
+    }
 }
 
 
 
 @media (min-width: 1400px) {
     body {
-       min-width: var(--desktop);
-       margin: 0 auto;
-       
+        min-width: var(--desktop);
+        margin: 0 auto;
+
     }
 
-    .filter--wrapper{
+    .filter--wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-top: 25px;
+        padding-left: 60px;
+        column-gap: 50px;
     }
 
-    .filter-wrapper--title{
+    .filter-wrapper--title {
         width: 100%;
         grid-column: 1/4;
     }
-   
-    .restaurants--title{
-        padding-left: 150px;
+
+    .restaurants--title {
+        padding-left: 60px;
     }
 
-    .restaurants--cards{
+    .restaurants--cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left: 60px;
+        padding-right: 60px;
         gap: 50px;
     }
 
-    .footer{
+    .footer {
         padding-top: 65px;
     }
 
-    .footer--block{
+    .footer--block {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         gap: 80px;
     }
 
-    .footer--title{
+    .footer--title {
         display: flex;
         justify-content: end;
         align-items: flex-end;
         margin: 0;
-    
+
     }
 
-    .footer--block--lists{
+    .footer--block--lists {
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
-    
+
     }
-     
-    .footer--block--list:nth-of-type(3){
+
+    .footer--block--list:nth-of-type(3) {
         margin-left: 40px;
-   }
+    }
 }
